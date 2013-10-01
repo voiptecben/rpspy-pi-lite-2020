@@ -1,0 +1,5 @@
+These Python scripts support the articles I have written on RaspberryPi-Spy.co.uk.
+
+They can be found under the following category :
+
+http://www.raspberrypi-spy.co.uk/category/hardware/pilite/
