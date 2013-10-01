@@ -51,12 +51,17 @@ loop = True
 
 while loop:
 
-    inp = raw_input('Press [Enter] to throw the dice:')
+    inp = raw_input("Press [Enter] to throw the dice:")
 
-    number = random.randint(1,6)
-    showDice(number)
-    print("You rolled a " + str(number))
-    time.sleep(2)
+    if inp.lower()!="x":
+      number = random.randint(1,6)
+      showDice(number)
+      print("You rolled a " + str(number))
+      time.sleep(2)
+    else:
+      loop = False
 
 # Turn off all LEDs    
 s.write("$$$ALL,OFF\r")
+
+print("Goodbye!")
