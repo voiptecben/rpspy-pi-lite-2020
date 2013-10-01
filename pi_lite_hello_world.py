@@ -1,4 +1,12 @@
 #!/usr/bin/env python
+#--------------------------------------
+#
+# Author : Matt Hawkins
+# Date   : 01/10/2013
+#
+# http://www.raspberrypi-spy.co.uk/
+#
+#--------------------------------------
 
 import serial
 import time

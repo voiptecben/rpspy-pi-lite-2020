@@ -1,11 +1,16 @@
 #!/usr/bin/env python
+#--------------------------------------
+#
+# Author : Matt Hawkins
+# Date   : 01/10/2013
+#
+# http://www.raspberrypi-spy.co.uk/
+#
+#--------------------------------------
 
-#import pygame
 import serial
 import time
 import random
-
-#pygame.init
 
 # Define list which contain dice graphic frames
 dice = ['000000000000000000000000000000000000000000000000000000000110000000110000000000000000000000000000000000000000000000000000000000',
@@ -46,16 +51,10 @@ print("Press any key to throw dice:")
 
 while loop:
 
-  #keys = pygame.key.get_pressed()
-  
-  #if keys[pygame.K_SPACE]:
     number = random.randint(1,6)
     showDice(number)
     print("You rolled a " + str(number))
     time.sleep(5)
-  #if keys[pygame.K_q]:
-    # q pressed so exit loop
-  #  loop = False
 
 # Turn off all LEDs    
 s.write("$$$ALL,OFF\r")
