@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 #--------------------------------------
 #
+# Pi-Lite Happy Halloween
+#
 # Author : Matt Hawkins
 # Date   : 01/10/2013
 #

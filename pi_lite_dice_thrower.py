@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 #--------------------------------------
 #
+# Pi-Lite Dice Thrower Example
+#
 # Author : Matt Hawkins
 # Date   : 01/10/2013
 #
