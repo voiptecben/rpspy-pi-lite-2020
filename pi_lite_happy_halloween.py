@@ -60,13 +60,18 @@ except serial.SerialException, e:
 s.write("$$$ALL,OFF\r")
 time.sleep(0.5)
 
-while True:
-  # Get list of object names
-  mykeys = objects.keys()
-  
-  # Loop through each name
-  for x in range(len(mykeys)):
-    showObject(mykeys[x],5,0.5)
-    time.sleep(1)     
-    s.write(message)  
-    time.sleep(8)  
+try:
+
+  while True:
+    # Get list of object names
+    mykeys = objects.keys()
+    
+    # Loop through each name
+    for x in range(len(mykeys)):
+      showObject(mykeys[x],5,0.5)
+      time.sleep(1)     
+      s.write(message)  
+      time.sleep(8)  
+      
+except KeyboardInterrupt:
+  print("Quit")
