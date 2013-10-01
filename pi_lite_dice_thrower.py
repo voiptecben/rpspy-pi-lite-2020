@@ -49,9 +49,9 @@ time.sleep(0.5)
 
 loop = True
 
-print("Press any key to throw dice:")
-
 while loop:
+
+    inp = raw_input('Press [Enter] to throw the dice:')
 
     number = random.randint(1,6)
     showDice(number)
