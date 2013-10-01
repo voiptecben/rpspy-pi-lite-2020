@@ -56,7 +56,7 @@ while loop:
     number = random.randint(1,6)
     showDice(number)
     print("You rolled a " + str(number))
-    time.sleep(5)
+    time.sleep(2)
 
 # Turn off all LEDs    
 s.write("$$$ALL,OFF\r")
