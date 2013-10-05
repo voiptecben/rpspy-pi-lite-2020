@@ -19,7 +19,7 @@ import time
 paddlock = ['000000000000000000000000000000011111011111111111111111110011111110011111111111111011111111000011111000000000000000000000000000',
             '011100000111100000110000000110011111111111111011111111000011111000011111000011111000011111000011111000000000000000000000000000']
 
-descripton = ['Locked','Unlocked']
+description = ['Locked','Unlocked']
             
 # Configure Pi serial port
 s = serial.Serial()
@@ -46,13 +46,13 @@ frame = 0
 
 while loop:
 
+    s.write('$$$F' + paddlock[frame] + '\r')  
+    print description[frame]
+
     inp = raw_input("Press [Enter] to toggle paddlock:")
 
     if inp.lower()!="x":
-      s.write('$$$F' + paddlock[frame] + '\r')  
-      print description[frame]
       frame = 1 - frame
-      time.sleep(2)
     else:
       loop = False
 
