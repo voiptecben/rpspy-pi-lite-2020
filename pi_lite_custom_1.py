@@ -33,21 +33,21 @@ except serial.SerialException, e:
     sys.stderr.write("could not open port %r: %s\n" % (port, e))
     sys.exit(1)
 
-print "Serial port ready"    
+print "Serial port ready"
 
 # Clear display
-s.write("$$$ALL,OFF\r")  
-    
+s.write("$$$ALL,OFF\r")
+
 # Send Sprite 1 to the Pi-Lite
 print "Sprite 1"
-s.write('$$$F' + sprite1 + '\r')  
+s.write('$$$F' + sprite1 + '\r')
 
 # Short delay
 time.sleep(2)
 
 # Send Sprite 2 to the Pi-Lite
-print "Sprite 1"
-s.write('$$$F' + sprite2 + '\r')  
+print "Sprite 2"
+s.write('$$$F' + sprite2 + '\r')
 
 # Short delay
 time.sleep(2)

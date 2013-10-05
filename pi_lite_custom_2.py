@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 #--------------------------------------
 #
-# Pi-Lite Custom Example #1
+# Pi-Lite Custom Example #2
 #
 # Author : Matt Hawkins
 # Date   : 05/10/2013
@@ -20,7 +20,7 @@ paddlock = ['0000000000000000000000000000000111110111111111111111111100111111100
             '011100000111100000110000000110011111111111111011111111000011111000011111000011111000011111000011111000000000000000000000000000']
 
 description = ['Locked','Unlocked']
-            
+
 # Configure Pi serial port
 s = serial.Serial()
 s.baudrate = 9600
@@ -35,10 +35,10 @@ except serial.SerialException, e:
     sys.stderr.write("could not open port %r: %s\n" % (port, e))
     sys.exit(1)
 
-print "Serial port ready"    
+print "Serial port ready"
 
 # Clear display
-s.write("$$$ALL,OFF\r")  
+s.write("$$$ALL,OFF\r")
 
 loop = True
 
@@ -46,10 +46,10 @@ frame = 0
 
 while loop:
 
-    s.write('$$$F' + paddlock[frame] + '\r')  
+    s.write('$$$F' + paddlock[frame] + '\r')
     print description[frame]
 
-    inp = raw_input("Press [Enter] to toggle paddlock:")
+    inp = raw_input("Press [Enter] to toggle paddlock. [x-Enter] to quit.")
 
     if inp.lower()!="x":
       frame = 1 - frame
