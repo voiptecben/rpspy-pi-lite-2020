@@ -4,7 +4,7 @@
 # Pi-Lite Custom Example #2
 #
 # Author : Matt Hawkins
-# Date   : 05/10/2013
+# Date   : 06/10/2013
 #
 # http://www.raspberrypi-spy.co.uk/
 #
@@ -13,12 +13,11 @@
 import serial
 import time
 
-# Define message complete with
-# carriage return at the end
-
+# Define paddlock list containing two sprites
 paddlock = ['000000000000000000000000000000011111011111111111111111110011111110011111111111111011111111000011111000000000000000000000000000',
             '011100000111100000110000000110011111111111111011111111000011111000011111000011111000011111000011111000000000000000000000000000']
 
+# Define list to describe each sprite
 description = ['Locked','Unlocked']
 
 # Configure Pi serial port
@@ -40,8 +39,8 @@ print "Serial port ready"
 # Clear display
 s.write("$$$ALL,OFF\r")
 
-loop = True
-
+# Initialise some variables
+loop  = True
 frame = 0
 
 while loop:
@@ -52,8 +51,11 @@ while loop:
     inp = raw_input("Press [Enter] to toggle paddlock. [x-Enter] to quit.")
 
     if inp.lower()!="x":
+      # Toggle frame to display
       frame = 1 - frame
     else:
+      # Exit loop
       loop = False
 
+# Quit
 print "Good bye"

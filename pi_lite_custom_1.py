@@ -4,7 +4,7 @@
 # Pi-Lite Custom Example #1
 #
 # Author : Matt Hawkins
-# Date   : 05/10/2013
+# Date   : 06/10/2013
 #
 # http://www.raspberrypi-spy.co.uk/
 #
@@ -13,9 +13,7 @@
 import serial
 import time
 
-# Define message complete with
-# carriage return at the end
-
+# Define two sprites
 sprite1 = '000000000000000000000011110000100010111001001100100101010010101010010101100100101111001001000100010000011110000000000000000000'
 sprite2 = '000000000000000000000000000000011111011111111111111111110011111110011111111111111011111111000011111000000000000000000000000000'
 
@@ -52,4 +50,5 @@ s.write('$$$F' + sprite2 + '\r')
 # Short delay
 time.sleep(2)
 
+# Quit
 print "Good bye"
