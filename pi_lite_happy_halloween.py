@@ -4,7 +4,7 @@
 # Pi-Lite Happy Halloween
 #
 # Author : Matt Hawkins
-# Date   : 01/10/2013
+# Date   : 08/10/2013
 #
 # http://www.raspberrypi-spy.co.uk/
 #
@@ -23,7 +23,7 @@ ghost  = ['000000000000000000000011111001100001010000010100100010100000001100100
 spider = ['001001000010010010100100101010101000001011110000111001000111000000111000000111001001011110010101000100100101010010010001001000',
           '010010010100100101101001000100101010011011101000111000000111000000111000000111000011011101100101010101001000100100101010010010']
    
-# Combine    
+# Combine into dictionary object   
 objects = {'face':face,'bat':bat,'ghost':ghost,'spider':spider}
    
 # Define text message to scroll
@@ -63,14 +63,15 @@ time.sleep(0.5)
 try:
 
   while True:
-    # Get list of object names
+    # Get list of object names from dictionary
     mykeys = objects.keys()
     
-    # Loop through each name
+    # Loop through each object
     for x in range(len(mykeys)):
       showObject(mykeys[x],5,0.5)
       time.sleep(1)     
       s.write(message)  
+      # Wait for scrolling message
       time.sleep(8)  
       
 except KeyboardInterrupt:
