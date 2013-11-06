@@ -13,8 +13,8 @@
 import serial
 import time
 
-# Define paddlock list containing two sprites
-paddlock = ['000000000000000000000000000000011111011111111111111111110011111110011111111111111011111111000011111000000000000000000000000000',
+# Define padlock list containing two sprites
+padlock = ['000000000000000000000000000000011111011111111111111111110011111110011111111111111011111111000011111000000000000000000000000000',
             '011100000111100000110000000110011111111111111011111111000011111000011111000011111000011111000011111000000000000000000000000000']
 
 # Define list to describe each sprite
@@ -45,10 +45,10 @@ frame = 0
 
 while loop:
 
-    s.write('$$$F' + paddlock[frame] + '\r')
+    s.write('$$$F' + padlock[frame] + '\r')
     print description[frame]
 
-    inp = raw_input("Press [Enter] to toggle paddlock. [x-Enter] to quit.")
+    inp = raw_input("Press [Enter] to toggle padlock. [x-Enter] to quit.")
 
     if inp.lower()!="x":
       # Toggle frame to display
