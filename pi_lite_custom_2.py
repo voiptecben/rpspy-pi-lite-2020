@@ -10,6 +10,7 @@
 #
 #--------------------------------------
 
+import sys
 import serial
 import time
 
