@@ -31,4 +31,4 @@ Additional information on these scripts can be found in the ReadMe.txt file.
 
 # Pi-Lite articles
 Visit my site for more information :
-[http://www.raspberrypi-spy.co.uk/category/hardware/pilite/](http://www.raspberrypi-spy.co.uk/category/hardware/pilite/)
+[http://www.raspberrypi-spy.co.uk/tag/pi-lite/](http://www.raspberrypi-spy.co.uk/tag/pi-lite/)
