@@ -34,7 +34,7 @@ message = "Happy Halloween !\r"
 s = serial.Serial()
 s.baudrate = 9600
 s.timeout = 0
-s.port = "/dev/ttyAMA0"
+s.port = "/dev/serial0"
 
 def showObject(name,count,delay):
   # Function to display frames from a specified object

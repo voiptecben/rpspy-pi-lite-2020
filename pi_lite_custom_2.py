@@ -25,7 +25,7 @@ description = ['Locked','Unlocked']
 s = serial.Serial()
 s.baudrate = 9600
 s.timeout = 0
-s.port = "/dev/ttyAMA0"
+s.port = "/dev/serial0"
 
 try:
     # Open serial port

@@ -22,7 +22,7 @@ sprite2 = '000000000000000000000000000000011111011111111111111111110011111110011
 s = serial.Serial()
 s.baudrate = 9600
 s.timeout = 0
-s.port = "/dev/ttyAMA0"
+s.port = "/dev/serial0"
 
 try:
     # Open serial port
